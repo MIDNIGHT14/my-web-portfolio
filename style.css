@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --primary-color: #4070F4;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px 'Poppins', sans-sserif;
+    padding: 1rem 8rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font: bold 1.5rem 'Barlow', sans-serif;
+}
+
+.navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-text {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.my-name {
+    color: var(--primary-color);
+}
+
+.my-photo {
+    width: 550px;
+    max-height: 500;
+}
+
+.contact-button {
+    margin-top: 1rem;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.--fa-pull-margin {
+    margin: 0.3rem;
+}
