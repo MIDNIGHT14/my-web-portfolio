@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins:wght@300;400;500&display=swap');
 
 :root {
@@ -23,6 +23,14 @@ a {
     color: #000;
 }
 
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -30,13 +38,16 @@ a {
 }
 
 .logo {
-    font: bold 1.5rem 'Barlow', sans-serif;
+    font: 400 2rem 'Oswald', sans-serif;
 }
 
-.navlinks ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 0.5rem 1rem;
+.navlinks ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-icon {
+    display: none;
 }
 
 .intro-section {
@@ -55,20 +66,57 @@ a {
     color: var(--primary-color);
 }
 
-.my-photo {
-    width: 550px;
-    max-height: 500;
-}
-
 .contact-button {
+    font-size: 0.9rem;
+    border: 1px solid var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
     margin-top: 1rem;
     color: #fff;
     padding: 0.8rem 2rem;
     background-color: var(--primary-color);
-    border: none;
     border-radius: 0.5rem;
+}
+
+.contact-button:hover {
+    background: #fff;
+    color: var(--primary-color);
+    transition: 0.7s;
 }
 
 .--fa-pull-margin {
     margin: 0.3rem;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 1rem 3rem;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .navlinks {
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.47);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(9.6px);
+        border-radius: 0.4rem;
+    }
+
+    .navlinks ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .intro-section{
+        flex-direction: column;
+    }
+
+    .intro-text-container {
+        margin-top: 4rem;
+    }
 }

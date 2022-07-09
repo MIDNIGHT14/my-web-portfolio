@@ -18,7 +18,7 @@
     <!--Navigation-->
     <nav class="navbar">
       <div class="logo">JOEL</div>
-      <div class="navlinks">
+      <div class="navlinks" id="navlinks">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Features</a></li>
@@ -27,30 +27,35 @@
           <li><a href="#">About</a></li>
         </ul>
       </div>
+      <a href="javascript:void(0);" class="menu-icon" onclick="myFunction()">
+        <i class="fa-solid fa-bars"></i>
+      </a>
     </nav>
 
     <main class="container">
       <!--Introduction Section Start-->
       <section>
         <div class="intro-section">
-          <div>
+          <div class="intro-text-container">
             <p class="intro-text">
               Hi,<br />I am <span class="my-name">Joel Cabuyao</span><br />a Web
               Developer.
             </p>
-            <button class="contact-button">Contact</button>
+            <button type="button" class="contact-button">Contact</button>
           </div>
           <div>
             <img class="my-photo" src="/images/graph.png" alt="" />
           </div>
         </div>
         <div class="icon-container">
-          <i class="fa-brands fa-github fa-xl --fa-pull-margin"></i>
-          <i class="fa-brands fa-linkedin fa-xl --fa-pull-margin"></i>
-          <i class="fa-brands fa-facebook fa-xl --fa-pull-margin"></i>
+          <i class="fa-brands fa-github fa-xl --fa-pull-margin icon"></i>
+          <i class="fa-brands fa-linkedin fa-xl --fa-pull-margin icon"></i>
+          <i class="fa-brands fa-facebook fa-xl --fa-pull-margin icon"></i>
         </div>
-        <!--Comment-->
       </section>
     </main>
+
+    <!--Script-->
+    <script src="script.js"></script>
   </body>
 </html>
