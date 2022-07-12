@@ -28,6 +28,7 @@ li {
 }
 
 img {
+    display: block;
     max-width: 100%;
 }
 
@@ -54,6 +55,14 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.intro-section > * {
+    flex-basis: 100%;
+}
+
+.my-photo {
+    width: 100%;
 }
 
 .intro-text {
