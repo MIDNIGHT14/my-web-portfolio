@@ -1,131 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins:wght@300;400;500&display=swap');
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
 :root {
-    --primary-color: #4070F4;
+    /*Typography*/
+    --poppins: 'Poppins', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+    /*Colors*/
+    --primary: #1877F2;
+    --grayish: rgba(0, 0, 0, 0.7);
 }
 
 *,
-*::after,
-*::before {
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    font: 16px 'Poppins', sans-sserif;
-    padding: 1rem 8rem;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-li {
-    list-style: none;
-}
-
-img {
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
 }
 
-.navbar {
+a,
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--poppins);
+    padding: 0 3.5rem;
+    background-image: url(images/background.svg);
+    background-attachment: fixed;
+    position: relative;
+}
+
+.flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo {
-    font: 400 2rem 'Oswald', sans-serif;
+.container {
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
 }
 
-.navlinks ul {
-    display: flex;
-    gap: 2rem;
+.header__logo {
+    font: 800 2rem var(--roboto-mono);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--primary);
 }
 
-.menu-icon {
+.header__navbar {
     display: none;
 }
 
-.intro-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.menu-icon {
+    color: var(--primary);
 }
 
-.intro-section > * {
-    flex-basis: 100%;
+/*Into Section Styles*/
+
+.intro {
+    padding-top: 0.8rem;
+    min-height: 100vh;
 }
 
-.my-photo {
-    width: 100%;
-}
-
-.intro-text {
-    font-size: 3rem;
-    font-weight: 500;
+.intro__text {
     line-height: 1.1;
 }
 
+.greetings {
+    font: 200 1.2rem var(--poppins);
+    line-height: 2;
+}
+
 .my-name {
-    color: var(--primary-color);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 2.5rem;
 }
 
-.contact-button {
-    font-size: 0.9rem;
-    border: 1px solid var(--primary-color);
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 1rem;
+.web-dev {
+    padding: 1rem 0;
+    color: var(--grayish);
+    font: 500 2rem var(--poppins);
+    line-height: 1.2;
+}
+
+.intro__paragraph {
+    font: 300 0.9rem var(--poppins);
+    padding-bottom: 1.5rem;
+    color: var(--grayish);
+}
+
+.btn {
+    padding: 0.5rem 1.9rem;
+    background-color: #fff;
+    border: 1px solid var(--primary);
+    border-radius: 0.3rem;
+    font: 600 0.8rem var(--poppins);
+    color: var(--primary);
+}
+
+.btn:hover {
+    background: var(--primary);
     color: #fff;
-    padding: 0.8rem 2rem;
-    background-color: var(--primary-color);
-    border-radius: 0.5rem;
+    transition: 0.75s;
 }
 
-.contact-button:hover {
-    background: #fff;
-    color: var(--primary-color);
-    transition: 0.7s;
+.intro__illustration {
+    display: none;
 }
 
-.--fa-pull-margin {
-    margin: 0.3rem;
+/*Skills Section Styles*/
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        padding: 1rem 3rem;
-    }
+.skills__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 0.7rem;
+    padding: 3rem;
+    color: var(--primary);
+    background-color: #fff;
+}
 
-    .menu-icon {
-        display: block;
-    }
-
-    .navlinks {
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background: rgba(255, 255, 255, 0.47);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(9.6px);
-        border-radius: 0.4rem;
-    }
-
-    .navlinks ul {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .intro-section{
-        flex-direction: column;
-    }
-
-    .intro-text-container {
-        margin-top: 4rem;
-    }
+.skills__icon {
+    font-size: 7rem;
+    
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="author" content="Joel Cabuyao" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,56 +13,68 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Joel Cabuyao - Web Developer</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+
+    <title>Joel Cabuyao</title>
   </head>
   <body>
-    <!--Navigation-->
-    <nav class="navbar">
-      <div class="logo">JOEL</div>
-      <div class="navlinks" id="navlinks">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">About</a></li>
+    <!--Header Start-->
+    <header class="flex container">
+      <div class="header__logo">{j}</div>
+      <nav class="header__navbar">
+        <ul class="navbar__list">
+          <li><a href="#" class="navbar__links">About</a></li>
+          <li><a href="#" class="navbar__links">Skills</a></li>
+          <li><a href="#" class="navbar__links">Projects</a></li>
+          <li><a href="#" class="navbar__links">About</a></li>
         </ul>
+      </nav>
+      <div class="header__menu-icon">
+        <i class="fa-solid fa-bars fa-lg menu-icon"></i>
       </div>
-      <a href="javascript:void(0);" class="menu-icon" onclick="myFunction()">
-        <i class="fa-solid fa-bars"></i>
-      </a>
-    </nav>
+    </header>
 
-    <main class="container">
-      <!--Introduction Section Start-->
-      <section>
-        <div class="intro-section">
-          <div class="intro-text-container">
-            <p class="intro-text">
-              Hi,<br />I am <span class="my-name">Joel Cabuyao</span><br />a Web
-              Developer.
-            </p>
-            <button type="button" class="contact-button">Contact</button>
-          </div>
-          <div>
-            <img class="my-photo" src="/images/graph.png" alt="" />
-          </div>
+    <!--Hero Section start-->
+    <main>
+      <section class="intro">
+        <div class="intro__text">
+          <div class="greetings">Hi, my name is</div>
+          <div class="my-name">Joel Cabuyao.</div>
+          <div class="web-dev">I am an aspiring Web Developer.</div>
+          <p class="intro__paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+            officiis illum nisi distinctio non amet ducimus! Possimus, eius? Qui
+            dicta itaque, dolorum porro laborum nobis.
+          </p>
+          <button class="btn">Contact</button>
         </div>
-        <div class="icon-container">
-          <a href="#"
-            ><i class="fa-brands fa-github fa-xl --fa-pull-margin icon"></i
-          ></a>
-          <a href="#"
-            ><i class="fa-brands fa-linkedin fa-xl --fa-pull-margin icon"></i
-          ></a>
-          <a href="#"
-            ><i class="fa-brands fa-facebook fa-xl --fa-pull-margin icon"></i
-          ></a>
+        <div class="intro__illustration">
+          <img
+            src="images/programmer.svg"
+            alt="An Illustration of a programmer."
+          />
+        </div>
+      </section>
+
+      <!--Skills Section Start-->
+      <section class="skills">
+        <div class="skills__container">
+          <i class="devicon-html5-plain skills__icon"></i>
+          <span>HTML</span>
+        </div>
+        <div class="skills__container">
+          <i class="devicon-css3-plain skills__icon"></i>
+          <span>CSS</span>
+        </div>
+        <div class="skills__container">
+          <i class="devicon-javascript-plain skills__icon"></i>
+          <span>JavaScript</span>
         </div>
       </section>
     </main>
-
-    <!--Script-->
-    <script src="script.js"></script>
   </body>
 </html>
