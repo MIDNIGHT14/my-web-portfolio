@@ -1,8 +1,7 @@
-function myFunction() {
-    let x = document.getElementById("navlinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
+const menuButton = document.getElementById('menu-button')
+const mobileNav = document.getElementById('nav-links-mobile')
+
+menuButton.addEventListener('click', () => {
+  mobileNav.classList.toggle('block')
+  mobileNav.classList.toggle('hidden')
+})

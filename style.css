@@ -1,6 +1,6 @@
 /*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:display=swap');
 
 :root {
     /*Typography*/
@@ -47,7 +47,62 @@ body {
     position: relative;
 }
 
+/*Header section Style*/
 .flex {
+    display: flex;
+}
+
+.block {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    padding: 1.25rem 0;
+}
+
+.navbar {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font: 1.5rem var(--roboto-mono);
+}
+
+.menu-button {
+    border: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links-mobile {
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.nav-links-mobile > li {
+    background-color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+    .nav-links{
+        display: none;
+    }
+    
+}
+
+
+/* .flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,7 +128,7 @@ body {
 
 .menu-icon {
     color: var(--primary);
-}
+} */
 
 /*Into Section Styles*/
 
