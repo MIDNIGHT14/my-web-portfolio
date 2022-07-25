@@ -1,225 +1,88 @@
 /*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:display=swap');
 
 :root {
     /*Typography*/
     --poppins: 'Poppins', sans-serif;
-    --roboto-mono: 'Roboto Mono', monospace;
-    /*Colors*/
-    --primary: #1877F2;
-    --grayish: #434655;
-    --very-grayish: #A8AABC;
-    --white: #FFF;
-    --dark-blue: #001e44;
+
+    --blue-1: #0066FF;
+    --blue-2: #00BBE7;
+    --blue-3: #00CE9A;
 }
 
+/* Box sizing rules */
 *,
 *::before,
 *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-a,
-a:visited {
-    text-decoration: none;
-    color: #000;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
-ul {
-    list-style: none;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
+/* Set core body defaults */
 body {
-    line-height: 1.5;
-    font-family: var(--poppins);
-    background-image: url(images/background.svg);
-    background-attachment: fixed;
-    position: relative;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background: #172144;
 }
 
-/*
-####################
-Header section Style
-####################
-*/
-.flex {
-    display: flex;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-.block {
-    display: block;
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-.hidden {
-    display: none;
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    padding: 0 3.5rem;
-    background-color: var(--white);
-}
-
-.container {
-    padding: 1.25rem 0;
-}
-
-.navbar {
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font: 1.5rem var(--roboto-mono);
-    color: var(--dark-blue);
-}
-
-.menu-button {
-    border: none;
-    color: var(--dark-blue);
-}
-
-.nav-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-links-mobile {
-    margin-top: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-}
-
-.nav-links-mobile > li {
-    background-color: var(--white);
-    padding: 1rem;
-    text-align: center;
-}
-
-@media screen and (max-width: 425px) {
-    .nav-links{
-        display: none;
-    }
-}
-
-@media screen and (min-width: 426px) {
-    .menu-button {
-        display: none;
-    }
-}
-
-.main-content-container{
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-/*
-###################
-Into Section Styles
-###################
-*/
-
-.intro {
-    padding: 0.8rem 3.5rem 0;
-}
-
-.intro__text {
-    line-height: 1.1;
-}
-
-.greetings {
-    font: 200 1.2rem var(--poppins);
-    line-height: 2;
-}
-
-.my-name {
-    color: var(--primary);
-    font-weight: 700;
-    font-size: 2.5rem;
-}
-
-.web-dev {
-    padding: 1rem 0;
-    color: var(--grayish);
-    font: 500 2rem var(--poppins);
-    line-height: 1.2;
-}
-
-.intro__paragraph {
-    font: 300 0.9rem var(--poppins);
-    padding-bottom: 1.5rem;
-    color: var(--grayish);
-}
-
-.btn {
-    padding: 0.5rem 1.9rem;
-    background-color: #fff;
-    border: 1px solid var(--primary);
-    border-radius: 0.3rem;
-    font: 600 0.8rem var(--poppins);
-    color: var(--primary);
-}
-
-.btn:hover {
-    background: var(--primary);
-    color: #fff;
-    transition: 0.75s;
-}
-
-.intro__illustration {
-    display: none;
-}
-
-/*
-#####################
-Skills Section Styles
-#####################
-*/
-.skills {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    padding: 1.5rem 0;
-    background-color: var(--dark-blue);
-    flex-wrap: wrap;
-}
-
-.section__title {
-    font-size: 2rem;
-    color: var(--white);
-    flex-basis: 100%;
-    text-align: center;
-}
-
-.skills__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.icon {
-    width: 50px;
-}
-
-.icon-title {
-    font: 400 1rem var(--poppins);
-    color: var(--white);
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
