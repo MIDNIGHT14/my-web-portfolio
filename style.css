@@ -5,6 +5,7 @@
     /*Typography*/
     --poppins: 'Poppins', sans-serif;
 
+    --primary: #172144;
     --blue-1: #0066FF;
     --blue-2: #00BBE7;
     --blue-3: #00CE9A;
@@ -16,6 +17,10 @@
 *::after {
   box-sizing: border-box;
   font: inherit;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Remove default margin */
@@ -85,4 +90,30 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/*
+######
+Header
+######
+*/
+.container {
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0 3rem;
+}
+
+.start {
+    font-size: 3rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.name {
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.9);
 }
